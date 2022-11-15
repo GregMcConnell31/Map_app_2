@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SetttingsActivity"
+    android:background="@color/mapboxBlue">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nova_script"
+        android:text="Settings"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        tools:layout_editor_absoluteX="176dp"
+        tools:layout_editor_absoluteY="48dp"
+        android:layout_marginTop="25sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Unit of measurement:"
+        android:id="@+id/unitText"
+        android:layout_centerVertical="true"
+        android:textSize="15sp">
+    </TextView>
+
+    <RadioButton
+        android:id="@+id/metricButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/unitText"
+        android:text="Metric"
+        android:layout_marginRight="10dp">
+    </RadioButton>
+
+    <RadioButton
+        android:id="@+id/imperialButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/metricButton"
+        android:text="Imperial"></RadioButton>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/unitText"
+        android:text="Preferred type of landmark:"
+        android:textSize="15sp"
+        android:id="@+id/landmarkType"
+        >
+
+    </TextView>
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/landmarkType"
+        android:layout_below="@+id/unitText"
+        android:id="@+id/landmarkSpinner"
+        >
+    </Spinner>
+
+    <Button
+        android:id="@+id/settingsSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20sp"
+        android:background="@color/colorAccent"
+        android:text="submit">
+
+    </Button>
+
+
+
+</RelativeLayout>
